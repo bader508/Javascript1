@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>JQuery Fade In/Fade Out/fadeToggle()</title>
+
+</head>
+
+<body>
+    <header>
+        <h1>First week of java script</h1>
+        <hr>
+        <h2>JQuery Fade In/Fade Out/fadeToggle()</h2>
+        <p><b><em>(Note:Open the console to check Java Script code)</em></b> </p>
+        <h3>JQuery TASKS</h3>
+        <nav class="btn">
+            <button id="hide" class="button button1"> Hide Tasks</button>
+            <button id="show" class="button button2"> Show Tasks </button>
+            <button id="fade" class="button button3"> Fade Toggle</button>
+            <button id="slide" class="button button4"> Slide Toggle</button>
+            <hr>
+
+        </nav>
+    </header>
+
+
+    <div id="tasks">
+        <div id="taskOne" class="task">1-Declare a <b>variable x </b>and initialize it with an <b>integer</b>.</div>
+        <div id="taskTwo" class="task">2-How do you round<b> the number 7.25,</b> to the nearest integer?</div>
+        <div id="taskThree" class="task">3-Create a <b>array</b> called colors with the strings <b>red, green and blue</b> inside.</div>
+        <div id="taskFour" class="task">4-How can you find the <b>length of the string</b> you just created?</div>
+        <div id="taskFive" class="task">5-Write a program that checks the types of two variables and prints out SAME TYPE if they are the same type.
+            <br><b> For example: let x = 9; let y = 'Hello'; if () { console.log('SAME TYPE'); }</b>
+        </div>
+        <div id="taskSix" class="task">6-<b>If x equals 7,</b> and the only other statement is<b> x = x % 3,</b> what would be the new value of x?</div>
+        <div id="taskSeven" class="task">7-Write a program to answer the following questions:<br> Can you store multiple types in an array? <br>Numbers and strings? <br>Can you compare inifities? (Not in Eyad's world) - <b>does 6/0 == 10/0?<br></b> How can you test this?</div>
+
+    </div>
+
+
+    <script src=" http://code.jquery.com/jquery-1.4.4.min.js " type="text/javascript "></script>
+
+
+    <script type="text/javascript ">
+        $(document).ready(function() {
+            $('nav').fadeOut(1500);
+            $('nav').fadeIn(1000);
+
+            $('#hide').click(function() {
+                $('#tasks').hide();
+            });
+            $('#show').click(function() {
+                $('#tasks').show();
+            });
+            $('#fade').click(function() {
+                $('#taskOne').fadeToggle(100);
+                $('#taskTwo').fadeToggle(200);
+                $('#taskThree').fadeToggle(300);
+                $('#taskFour').fadeToggle(400);
+                $('#taskFive').fadeToggle(500);
+                $('#taskSix').fadeToggle(600);
+                $('#taskSeven').fadeToggle(700);
+            });
+            $('#slide').click(function() {
+                $('#taskOne').slideToggle(500);
+                $('#taskTwo').slideToggle(1000);
+                $('#taskThree').slideToggle(1500);
+                $('#taskFour').slideToggle(2000);
+                $('#taskFive').slideToggle(2500);
+                $('#taskSix').slideToggle(3000);
+                $('#taskSeven').slideToggle(3500);
+            });
+        });
+    </script>
+    <script type="text/javascript" src="./main.js"></script>
+
+</body>
+
+</html>
